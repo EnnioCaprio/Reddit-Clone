@@ -21,7 +21,6 @@ Deployment: Git, GitHub, Docker for containerization and AWS (EC2, RDS, ECR, ECS
     <li>Pagination for user profile, so API doesn't need to load all the extra informations</li>
     <li>The tree structure for comments</li>
     <li>Improve ui error handling</li>
-    <li>Improve the voting system, sometimes there are delays among API calls so the user has to refresh to see the selected vote</li>
   </ul>
   
  
@@ -30,7 +29,7 @@ Deployment: Git, GitHub, Docker for containerization and AWS (EC2, RDS, ECR, ECS
  
  <h3>Root credentials</h3>
  <ul>
-  <li>Email: root@gmail.com</li>
-  <li>Password: 12345678</li>
+  <li>Email: root@try.com</li>
+  <li>Password: root1234</li>
  </ul>
  
