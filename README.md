@@ -1,4 +1,4 @@
-# Reddit-Clone-Application
+<h1>Reddit-Clone-Application</h1>
 
 Hi this is the reddit clone application
 
