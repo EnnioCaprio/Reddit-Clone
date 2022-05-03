@@ -1,11 +1,14 @@
 const fs = require('fs');
+const path = require('path');
 require('dotenv').config();
+
+console.log(process.env);
 
 module.exports = {
   development: {
     client: 'pg',
     connection: {
-      host: 'localhost',
+      host: 'db',
       database: 'Application',
       port: 5432,
       user: 'postgres',
@@ -17,7 +20,6 @@ module.exports = {
     seeds: {
       directory: './data/seeds'
     },
-
   },
   testing: {
     client: 'pg',
@@ -39,10 +41,10 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DB_PROD,
+    connection: process.env.DB_URL,
     ssl: {
-      rejectUnauthorized: true,
-      ca: fs.readFileSync('./nginx/configs/certs/ca-certificate.crt').toString()
+      rejectUnauthorized: false,
+      ca: process.env.CA_CERT
     },
     migrations: {
       directory: './data/migrations'

@@ -1,6 +1,7 @@
 version: '3'
 services: 
   nginx:
+    container_name: nginx
     depends_on:
         - react-front-reddit
         - express-server-reddit
@@ -35,7 +36,12 @@ services:
     restart: on-failure
   db:
     image: postgres
-    env_file: 
-      - ./docker-env/postgres/app.env
+    environment: 
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: Application
+      DATABASE_URL: postgres://postgres:password@db:5432/Application
+      TZ: 'Europe/Rome'
+      PGTZ: 'Europe/Rome'
     ports:
       - "5432:5432"
