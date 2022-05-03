@@ -19,4 +19,4 @@ jobs:
     - run: |
         npm install
         cd client
-        yarn install
+        npm install
